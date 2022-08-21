@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <form class="LangSelector">
+        <label id="langSelect" for="langSelec">Language</label>
+        <select id="lang" name="langSelec" id="langSelec">
+            <option value="en">English</option>
+            <option value="es-MX">Español (MX)</option>
+            <option value="es-ES">Español (ES)</option>
+        </select>
+    </form>
+    <div id="ModalContainer" class="ModalContainer hidden">
+        <div class="Modal">
+            <h1 id="ModalHead" class="ModalHead"></h1>
+            <p id="ModalMessage" class="ModalMessage">Click anywhere to restart</p>
+        </div>
+    </div>
+    <div class="gameContainer">
+        <h1 id="gameTitle" class="gameTitle">Tic Tac Toe</h1>
+        <h2 id="instruction" class="instruction">Click a box to start</h2>
+        <div class="table">
+            <div id="1" class="cell"></div>
+            <div id="2" class="cell"></div>
+            <div id="3" class="cell"></div>
+            <div id="4" class="cell"></div>
+            <div id="5" class="cell"></div>
+            <div id="6" class="cell"></div>
+            <div id="7" class="cell"></div>
+            <div id="8" class="cell"></div>
+            <div id="9" class="cell"></div>
+        </div>
+    </div>
+</body>
+<script src="./js/Lang.js"></script>
+<script src="./js/Translator.js"></script>
+<script src="./js/PlayerStatus.js"></script>
+<script src="./js/Validator.js"></script>
+<script defer src="./js/Main.js"></script>
+
+</html>

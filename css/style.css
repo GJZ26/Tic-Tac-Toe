@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(180, 204, 255);
+}
+
+@font-face {
+    font-family: Uroob;
+    src: url('./font/Uroob-Regular.ttf');
+}
+
+@font-face {
+    font-family: Sawasdee;
+    src: url('./font/Sawasdee.ttf');
+}
+
+.gameTitle{
+    text-align: center;
+    color: rgb(218, 93, 218);
+    font-family: Uroob;
+    font-size: 55px;
+    letter-spacing: 3px;
+}
+
+.redTurn{
+    color: rgb(255, 104, 104)
+}
+
+.blueTurn{
+    color: rgb(104, 127, 255)
+}
+
+.instruction{
+    color: rgb(68, 39, 39);
+    font-size: 19px;
+    font-family: Sawasdee;
+}
+
+.gameContainer{
+    width: 100%;
+    height:100%;
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table{
+    margin-top: 20px;
+    background-color: whitesmoke;
+    width: 300px;
+    height: 300px ;
+    border-radius: 12px;
+    padding: 11px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cell{
+    border-radius: 8px;
+    width: 30%;
+    height: 30%;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgb(216, 216, 216);
+}
+
+.cell:hover{
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 200ms;
+}
+
+.blue{
+    animation: changing 300ms linear;
+    background-color: rgb(199, 228, 255);
+}
+
+.red{
+    animation: changing 300ms linear;
+    background-color: rgb(255, 199, 199);  
+}
+
+.win{
+    background-color: rgb(255, 217, 146);
+}
+
+.disable{
+    box-shadow: none;
+}
+
+.disable:hover{
+ cursor: default;   
+}
+
+.ModalContainer{
+    background-color: rgba(85, 85, 85, 0.171);
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Modal{
+    background-color: white;
+    width: 100%;
+    height: 100px;
+}
+
+.ModalHead, .ModalMessage{
+    text-align: center;
+    background: none;
+}
+
+.ModalHead{
+    font-family: Uroob;
+    letter-spacing: 5px;
+    margin-top: 18px;
+    text-transform: capitalize;
+}
+
+.ModalMessage{
+    font-family: Sawasdee;/*  */
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.hidden{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.credit{
+    border-bottom: solid 1px rgb(132, 132, 255);
+    font-weight: 800;
+    margin-top: 80px;
+    font-family: Sawasdee;
+    color: rgb(132, 132, 255);
+}
+
+.credit:hover{
+    color: rgb(65, 65, 236);
+}
+
+a:visited{
+    color: rgb(132, 132, 255);
+}
+
+.LangSelector{
+    margin: 12px;
+    font-family: Sawasdee;
+}
+
+@keyframes changing {
+    0%{
+        transform: rotate3d(0)
+    }
+    100%{
+        transform: rotate3d(0, 90, 0, 180deg);
+    }
+}

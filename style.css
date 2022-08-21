@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gameZone{
+    background-color: rgb(199, 255, 216);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameContainer{
+    background-color: whitesmoke;
+    width: 300px;
+    height: 300px ;
+    border-radius: 12px;
+    padding: 11px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cell{
+    border-radius: 8px;
+    width: 30%;
+    height: 30%;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgb(216, 216, 216);
+}
+
+.cell:hover{
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 200ms;
+}
+
+.blue{
+    animation: changing 300ms linear;
+    background-color: rgb(199, 228, 255);
+}
+
+.red{
+    animation: changing 300ms linear;
+    background-color: rgb(255, 199, 199);  
+}
+
+.win{
+    background-color: rgb(255, 217, 146);
+}
+
+.rotating{
+    animation: changing 300ms linear;
+}
+
+.disable{
+    box-shadow: none;
+}
+
+.disable:hover{
+ cursor: default;   
+}
+
+@media all and (max-width:500px) {
+    .gameContainer{
+        background-color: blue;
+    }
+}
+
+@keyframes changing {
+    0%{
+        transform: rotate3d(0)
+    }
+    100%{
+        transform: rotate3d(0, 90, 0, 180deg);
+    }
+}
